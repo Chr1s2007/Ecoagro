@@ -1,20 +1,11 @@
-// App.jsx
-import { useState } from 'react';
-import SignUp from './SignUp';
-import Principal from './Principal';
+import LoginForm from "./Loginform";
 
-function App() {
-  const [estaRegistrado, setEstaRegistrado] = useState(false);
-
+function App(){
   return (
     <div>
-      {estaRegistrado ? (
-        <Principal />
-      ) : (
-        <SignUp onSignUp={() => setEstaRegistrado(true)} />
-      )}
+      <LoginForm />
     </div>
   );
-}
+};
 
 export default App;

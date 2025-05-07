@@ -1,127 +1,27 @@
-/* src/index.css */
-:root {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-  margin: 0;
-  padding: 0;
+     margin: 0;
+     font-family: 'Poppins', sans-serif;
+     -webkit-font-smoothing:antialiased;
+     -moz-osx-font-smoohing:grayscale;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background: url("./assets/main.jpeg")no-repeat;
+     background-size: cover;
+     background-position: center;
+
 }
 
-/* Barra de búsqueda */
-.search-bar {
-  background-color: #5b441b;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+code{
+    font-family: source-code-pro, Menlo, Monaco, Consolas,
+    'Courier New' , 
+    monospace
 }
-
-.search-bar input {
-  flex: 1;
-  padding: 8px 12px;
-  border-radius: 20px;
-  border: none;
-  outline: none;
-}
-
-/* Bienvenida */
-.welcome {
-  padding: 16px;
-}
-
-.welcome h2 {
-  margin: 0;
-  font-weight: normal;
-}
-
-.welcome b {
-  font-weight: bold;
-}
-
-/* Producto destacado */
-.featured-product {
-  background-color: #4caf50;
-  color: white;
-  margin: 0 16px;
-  padding: 16px;
-  border-radius: 16px;
-  text-align: center;
-}
-
-.featured-product img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 8px;
-}
-
-/* Puntos */
-.dots {
-  margin-top: 8px;
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-}
-
-.dots span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: white;
-  opacity: 0.5;
-}
-
-.dots span.active {
-  opacity: 1;
-}
-
-/* Categorías */
-.categories {
-  padding: 16px;
-}
-
-.categories h3 {
-  margin-bottom: 16px;
-  text-align: center;
-}
-
-.category-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.category-card {
-  border: 1px solid #4caf50;
-  border-radius: 12px;
-  text-align: center;
-  padding: 12px;
-  background-color: white;
-}
-
-.category-card img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  margin-bottom: 8px;
-}
-
-/* Navegación inferior */
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #5b441b;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-}
-
-.bottom-nav button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 20px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }

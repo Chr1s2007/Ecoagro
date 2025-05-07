@@ -1,12 +1,11 @@
-// main.jsx
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css'; // Importación del CSS global
-import App from './App.jsx'; // Importación del componente principal
+import App from './App.jsx'; 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
   </StrictMode>
 );
+
 
