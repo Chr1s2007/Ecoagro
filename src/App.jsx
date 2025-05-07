@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home';
-import Second from './Second';
+import DairyProductsGrid from './DairyProductsGrid';
 
 function App() {
   return (

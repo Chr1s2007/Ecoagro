@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Home.css'; // Importa el CSS externo
+import './Home.css';
 
 function Home() {
   const [clicked, setClicked] = useState(false);
@@ -14,17 +14,19 @@ function Home() {
   };
 
   return (
-    <div className="home-container">
-      <button
-        onClick={handleButtonClick}
-        className={`home-button ${clicked ? 'clicked' : ''}`}
-      >
-        <img
-          src="/img/logo.png"
-          alt="Botón principal"
-          className="home-image"
-        />
-      </button>
+    <div className="phone-frame">
+      <div className="home-container">
+        <button
+          onClick={handleButtonClick}
+          className={`home-button ${clicked ? 'clicked' : ''}`}
+        >
+          <img
+            src="/img/logo.png"
+            alt="Botón principal"
+            className="home-image"
+          />
+        </button>
+      </div>
     </div>
   );
 }
