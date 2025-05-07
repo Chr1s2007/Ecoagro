@@ -43,7 +43,7 @@
 .input-box .icon {
     position: absolute;
     right: 20px;
-    top: 50%;
+    top: 18px;
     transform: translate(-50%);
     font-size: 16px;
 }
@@ -97,3 +97,27 @@
 .register-link p a:hover {
     text-decoration: underline;
 }
+
+body {
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .phone-frame {
+    width: 375px;
+    height: 667px;
+    border: 10px solid #333;
+    border-radius: 40px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    background: url("./assets/main.jpeg");
+    background-size: cover; /* Ajusta la imagen para cubrir el área */
+    background-position: center; /* Centra la imagen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
