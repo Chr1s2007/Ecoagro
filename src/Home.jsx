@@ -1,31 +1,28 @@
-import { useState } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
 function Home() {
-  const [clicked, setClicked] = useState(false);
   const navigate = useNavigate();
 
-  const handleButtonClick = () => {
-    setClicked(true);
-    setTimeout(() => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      // Navega automáticamente a los 3 segundos
       navigate('/segunda-pagina');
-    }, 300);
-  };
+    }, 4000);
+
+    return () => clearTimeout(timer); // Limpieza si se desmonta
+  }, [navigate]);
 
   return (
     <div className="phone-frame">
-      <div className="home-container">
-        <button
-          onClick={handleButtonClick}
-          className={`home-button ${clicked ? 'clicked' : ''}`}
-        >
-          <img
-            src="/img/logo.png"
-            alt="Botón principal"
-            className="home-image"
-          />
-        </button>
+      <div className="home-container fade-in">
+        <img
+          src="/img/logo.png"
+          alt="Logo principal"
+          className="home-image"
+        />
+        <h2 className="home-text">Bienvenido</h2>
       </div>
     </div>
   );
