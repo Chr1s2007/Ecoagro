@@ -1,0 +1,115 @@
+/* Centrar el "teléfono" en la pantalla */
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.phone-frame {
+  width: 375px; /* Tamaño estándar de iPhone */
+  height: 667px;
+  border: 10px solid #333;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  background-color: #000;
+  position: relative;
+}
+
+/* Estilos internos del "teléfono" */
+.dairy-container {
+  background-color: #f3f4f6;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 4rem;
+  overflow-y: auto;
+}
+
+.dairy-header {
+  background-color: #4f3919;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dairy-cart {
+  position: relative;
+}
+
+.dairy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.dairy-card-wrapper {
+  position: relative;
+}
+
+.dairy-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+
+.dairy-favorite {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+}
+
+.favorite-button {
+  background-color: white;
+  border-radius: 9999px;
+  padding: 0.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dairy-image-container {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dairy-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dairy-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.dairy-count {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background-color: #289C3E;
+  color: white;
+  border-radius: 9999px;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}

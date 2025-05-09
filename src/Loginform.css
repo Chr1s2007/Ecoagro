@@ -1,13 +1,3 @@
-.wrapper{
-    width: 420px;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    backdrop-filter: blur(30px);
-    color: #fff;
-    border-radius: 10px;
-    padding: 30px 40px;
-}
 
 .wrapper h1 {
     font-size: 36px;
@@ -106,6 +96,7 @@ body {
     min-height: 100vh;
   }
   
+  
   .phone-frame {
     width: 375px;
     height: 667px;
@@ -114,10 +105,22 @@ body {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     background: url("./assets/main.jpeg");
-    background-size: cover; /* Ajusta la imagen para cubrir el área */
-    background-position: center; /* Centra la imagen */
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
+    position: relative;
+}
+
+.wrapper {
+    width: 320px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(15px);
+    color: #fff;
+    border-radius: 15px;
+    padding: 20px 30px;
+    position: absolute;
+}
