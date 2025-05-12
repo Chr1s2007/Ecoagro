@@ -1,0 +1,158 @@
+.grocery-app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .search-header {
+    background-color: #f59e0b;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-button {
+    margin-right: 10px;
+    color: white;
+  }
+  
+  .search-box {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .search-input {
+    padding: 8px;
+    flex-grow: 1;
+    border-radius: 10px 0 0 10px;
+    font-size: 14px;
+  }
+  
+  .search-button {
+    background-color: #e5e5e5;
+    padding: 8px;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow: auto;
+  }
+  
+  .welcome-text {
+    margin-bottom: 16px;
+  }
+  
+  .greeting {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .choose-products {
+    color: #6b7280;
+  }
+  
+  .featured-product {
+    background-color: #10b981;
+    border-radius: 12px;
+    padding: 15px;
+    color: white;
+    margin-bottom: 24px;
+  }
+  
+  .product-card {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-image img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  
+  .product-info {
+    margin-left: 12px;
+  }
+  
+  .product-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .product-price {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .product-slider {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .slider-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.5;
+    margin: 0 4px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .slider-dot.active {
+    opacity: 1;
+  }
+  
+  .categories {
+    margin-top: 20px;
+  }
+  
+  .category-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .category-card {
+    background-color: white;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .category-image img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+  }
+  
+  .navbar {
+    background-color: white;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  .nav-button {
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
