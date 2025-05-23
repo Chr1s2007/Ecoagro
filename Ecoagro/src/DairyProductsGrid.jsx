@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Heart, Home, ShoppingCart } from 'lucide-react';
 import './DairyProductsGrid.css';
 
 export default function DairyProductsGrid() {
   const [favorites, setFavorites] = useState({});
+  const navigate = useNavigate();
 
   const products = [
     { id: 1, name: 'Queso Duro', image: '/api/placeholder/100/100', count: 1 },
@@ -27,7 +29,11 @@ export default function DairyProductsGrid() {
     <div className="phone-frame">
       <div className="dairy-container">
         <header className="dairy-header">
-          <Home size={24} />
+          <Home
+            size={24}
+            onClick={() => navigate('/Inicio')}
+            style={{ cursor: 'pointer' }}
+          />
           <div className="dairy-cart">
             <ShoppingCart size={24} />
           </div>
@@ -38,7 +44,13 @@ export default function DairyProductsGrid() {
             <div key={product.id} className="dairy-card-wrapper">
               <button
                 className="dairy-card"
-                onClick={() => console.log(`Navigate to product ${product.id}`)}
+                onClick={() => {
+                  if (product.name === 'Queso Duro') {
+                    navigate('/description');
+                  } else {
+                    console.log(`Navigate to product ${product.id}`);
+                  }
+                }}
               >
                 <div className="dairy-favorite">
                   <button

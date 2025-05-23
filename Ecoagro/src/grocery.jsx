@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // 👈 Importante
 import './grocery.css';
 
 export default function GroceryApp() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeProductIndex, setActiveProductIndex] = useState(1);
+  const navigate = useNavigate(); // 👈 Hook de navegación
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
@@ -39,7 +41,6 @@ export default function GroceryApp() {
                 }
               }}
             />
-          
           </div>
         </div>
 
@@ -74,7 +75,16 @@ export default function GroceryApp() {
             <h2 className="category-title">Categories</h2>
             <div className="category-grid">
               {categories.map((category, index) => (
-                <div key={index} className="category-card">
+                <div
+                  key={index}
+                  className="category-card"
+                  onClick={() => {
+                    if (category.name === 'Dairy') {
+                      navigate('/dairy-products'); // 👈 Navega a Dairy
+                    }
+                  }}
+                  style={{ cursor: 'pointer' }}
+                >
                   <div className="category-image">
                     <img src={category.image} alt={category.name} />
                   </div>
@@ -87,17 +97,17 @@ export default function GroceryApp() {
 
         <div className="navbar">
           <button className="nav-button">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z" fill="black"/>
             </svg>
           </button>
           <button className="nav-button">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M10 20V14H14V20H19V12H22L12 3L2 12H5V20H10Z" fill="black"/>
             </svg>
           </button>
           <button className="nav-button">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <rect x="3" y="3" width="18" height="18" rx="2" stroke="black" strokeWidth="2"/>
             </svg>
           </button>
